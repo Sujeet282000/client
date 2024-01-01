@@ -2,7 +2,7 @@ import TodoContext from './TodoContext';
 import { useState } from 'react';
 
 const TodoState = (props) => {
-	const host = 'http://localhost:3000';
+	const host = "https://auth-server-rhgs.onrender.com";
 
 	const todosInitial = [];
 

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
+const baseurl = "https://auth-server-rhgs.onrender.com";
 
 function Login(props) {
 	const [credentials, setCredentials] = useState({ email: '', password: '' });
@@ -9,7 +10,7 @@ function Login(props) {
 	const handleSubmit = async (e) => {
 		e.preventDefault();
 		const response = await fetch(
-			`http://localhost:3000/api/auth/login`,
+			`${baseurl}/api/auth/login`,
 			{
 				method: 'POST',
 				headers: {

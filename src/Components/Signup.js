@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
+const baseurl = "https://auth-server-rhgs.onrender.com";
 
 function Signup(props) {
 	const [credentials, setCredentials] = useState({
@@ -16,7 +17,7 @@ function Signup(props) {
 		const { name, email, password } = credentials;
 
 		const response = await fetch(
-			`http://localhost:3000/api/auth/createuser`,
+			`${baseurl}/api/auth/createuser`,
 			{
 				method: 'POST',
 				headers: {
