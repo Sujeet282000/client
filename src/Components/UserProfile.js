@@ -1,12 +1,15 @@
 import React, { useState, useEffect } from 'react';
 
+const baseurl = "https://auth-server-rhgs.onrender.com";
+
 function UserProfile() {
 	const [userName, setUserName] = useState('');
 	const [userEmail, setUserEmail] = useState('');
 
+
 	useEffect(() => {
 		const myRequest = new Request(
-			'http://localhost:3000/api/auth/getuser',
+			`${baseurl}/api/auth/getuser`,
 			{
 				method: 'POST',
 				headers: {
