@@ -44,7 +44,7 @@ const TodoState = (props) => {
 			method: 'DELETE',
 			headers: {
 				'Content-Type': 'application/json',
-				'auth-token': localStorage.getItem('token'),
+				'auth-token': "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjNmNzMwZTk3Mzc5Njc5NTcxYWNiM2FkIn0sImlhdCI6MTY3NzE0NDI5N30.0p79XsJz9t6afaapVZxB1_uu-wUYd0zPTx17blkKPt8",
 			},
 		});
 		const json = response.json();
